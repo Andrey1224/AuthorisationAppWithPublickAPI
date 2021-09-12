@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B402D3EBE5E287B06F45CA0F /* Pods_AuthorisationAppWithPublickAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E545853DACE46B4F6341F8 /* Pods_AuthorisationAppWithPublickAPI.framework */; };
+		CC5CEE7F26EE9381002A1B4D /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CEE7E26EE9381002A1B4D /* ChatTableViewController.swift */; };
+		CC5CEE8126EE95AB002A1B4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC5CEE8026EE95AB002A1B4D /* GoogleService-Info.plist */; };
 		CC6147C226ED064800175D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6147C126ED064800175D5E /* AppDelegate.swift */; };
 		CC6147C426ED064800175D5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6147C326ED064800175D5E /* SceneDelegate.swift */; };
-		CC6147C626ED064800175D5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6147C526ED064800175D5E /* ViewController.swift */; };
+		CC6147C626ED064800175D5E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6147C526ED064800175D5E /* WelcomeViewController.swift */; };
 		CC6147C926ED064800175D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6147C726ED064800175D5E /* Main.storyboard */; };
 		CC6147CB26ED064800175D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6147CA26ED064800175D5E /* Assets.xcassets */; };
 		CC6147CE26ED064800175D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6147CC26ED064800175D5E /* LaunchScreen.storyboard */; };
+		CC6147DD26ED1D2000175D5E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6147DC26ED1D2000175D5E /* LoginViewController.swift */; };
+		CC6147DF26ED1D3600175D5E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6147DE26ED1D3600175D5E /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73E545853DACE46B4F6341F8 /* Pods_AuthorisationAppWithPublickAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthorisationAppWithPublickAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89BF52889F020BE9A78C270C /* Pods-AuthorisationAppWithPublickAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthorisationAppWithPublickAPI.debug.xcconfig"; path = "Target Support Files/Pods-AuthorisationAppWithPublickAPI/Pods-AuthorisationAppWithPublickAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		9BEEB4874543D2A46F361168 /* Pods-AuthorisationAppWithPublickAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthorisationAppWithPublickAPI.release.xcconfig"; path = "Target Support Files/Pods-AuthorisationAppWithPublickAPI/Pods-AuthorisationAppWithPublickAPI.release.xcconfig"; sourceTree = "<group>"; };
+		CC5CEE7E26EE9381002A1B4D /* ChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
+		CC5CEE8026EE95AB002A1B4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC6147BE26ED064800175D5E /* AuthorisationAppWithPublickAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorisationAppWithPublickAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6147C126ED064800175D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC6147C326ED064800175D5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC6147C526ED064800175D5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC6147C526ED064800175D5E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CC6147C826ED064800175D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC6147CA26ED064800175D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC6147CD26ED064800175D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC6147CF26ED064800175D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC6147DC26ED1D2000175D5E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC6147DE26ED1D3600175D5E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B402D3EBE5E287B06F45CA0F /* Pods_AuthorisationAppWithPublickAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65284A4FCF085564F88978AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89BF52889F020BE9A78C270C /* Pods-AuthorisationAppWithPublickAPI.debug.xcconfig */,
+				9BEEB4874543D2A46F361168 /* Pods-AuthorisationAppWithPublickAPI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8198543ECC5BF3808C9D80A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73E545853DACE46B4F6341F8 /* Pods_AuthorisationAppWithPublickAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC5CEE7C26EE9301002A1B4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC6147C726ED064800175D5E /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC5CEE7D26EE931B002A1B4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC6147C526ED064800175D5E /* WelcomeViewController.swift */,
+				CC6147DC26ED1D2000175D5E /* LoginViewController.swift */,
+				CC6147DE26ED1D3600175D5E /* RegisterViewController.swift */,
+				CC5CEE7E26EE9381002A1B4D /* ChatTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CC6147B526ED064800175D5E = {
 			isa = PBXGroup;
 			children = (
 				CC6147C026ED064800175D5E /* AuthorisationAppWithPublickAPI */,
 				CC6147BF26ED064800175D5E /* Products */,
+				65284A4FCF085564F88978AA /* Pods */,
+				8198543ECC5BF3808C9D80A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +110,12 @@
 			children = (
 				CC6147C126ED064800175D5E /* AppDelegate.swift */,
 				CC6147C326ED064800175D5E /* SceneDelegate.swift */,
-				CC6147C526ED064800175D5E /* ViewController.swift */,
-				CC6147C726ED064800175D5E /* Main.storyboard */,
+				CC5CEE7D26EE931B002A1B4D /* Controller */,
+				CC5CEE7C26EE9301002A1B4D /* Views */,
 				CC6147CA26ED064800175D5E /* Assets.xcassets */,
 				CC6147CC26ED064800175D5E /* LaunchScreen.storyboard */,
 				CC6147CF26ED064800175D5E /* Info.plist */,
+				CC5CEE8026EE95AB002A1B4D /* GoogleService-Info.plist */,
 			);
 			path = AuthorisationAppWithPublickAPI;
 			sourceTree = "<group>";
@@ -74,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC6147D226ED064800175D5E /* Build configuration list for PBXNativeTarget "AuthorisationAppWithPublickAPI" */;
 			buildPhases = (
+				824D43B1341E9BD579702B74 /* [CP] Check Pods Manifest.lock */,
 				CC6147BA26ED064800175D5E /* Sources */,
 				CC6147BB26ED064800175D5E /* Frameworks */,
 				CC6147BC26ED064800175D5E /* Resources */,
+				7180F221E82AEF0F0600AA04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6147CE26ED064800175D5E /* LaunchScreen.storyboard in Resources */,
+				CC5CEE8126EE95AB002A1B4D /* GoogleService-Info.plist in Resources */,
 				CC6147CB26ED064800175D5E /* Assets.xcassets in Resources */,
 				CC6147C926ED064800175D5E /* Main.storyboard in Resources */,
 			);
@@ -132,14 +188,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7180F221E82AEF0F0600AA04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthorisationAppWithPublickAPI/Pods-AuthorisationAppWithPublickAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthorisationAppWithPublickAPI/Pods-AuthorisationAppWithPublickAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AuthorisationAppWithPublickAPI/Pods-AuthorisationAppWithPublickAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		824D43B1341E9BD579702B74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AuthorisationAppWithPublickAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CC6147BA26ED064800175D5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6147C626ED064800175D5E /* ViewController.swift in Sources */,
+				CC6147C626ED064800175D5E /* WelcomeViewController.swift in Sources */,
+				CC6147DF26ED1D3600175D5E /* RegisterViewController.swift in Sources */,
 				CC6147C226ED064800175D5E /* AppDelegate.swift in Sources */,
+				CC6147DD26ED1D2000175D5E /* LoginViewController.swift in Sources */,
 				CC6147C426ED064800175D5E /* SceneDelegate.swift in Sources */,
+				CC5CEE7F26EE9381002A1B4D /* ChatTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +384,7 @@
 		};
 		CC6147D326ED064800175D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89BF52889F020BE9A78C270C /* Pods-AuthorisationAppWithPublickAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +404,7 @@
 		};
 		CC6147D426ED064800175D5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BEEB4874543D2A46F361168 /* Pods-AuthorisationAppWithPublickAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
