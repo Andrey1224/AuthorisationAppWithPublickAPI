@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import Firebase
 
 
 
 class WelcomeViewController: UIViewController {
+    
     
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,10 +25,14 @@ class WelcomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        
+        
     }
     
     let titleText = "Small🗣Chat"
@@ -42,7 +47,7 @@ class WelcomeViewController: UIViewController {
                 self.titleLabel.text?.append(letter)
             }
             indexLetter += 1
-            print(indexLetter)
+            
         }
         
         loginButton.addShadow()
@@ -51,6 +56,9 @@ class WelcomeViewController: UIViewController {
         registerButton.layer.cornerRadius = registerButton.frame.size.height / 2
         
     }
+    
+  
+    
     
 }
 

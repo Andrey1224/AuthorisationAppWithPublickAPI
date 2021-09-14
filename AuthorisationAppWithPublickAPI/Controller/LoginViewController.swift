@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     
     @IBOutlet weak var logButton: UIButton!
     
@@ -21,16 +22,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        password.layer.cornerRadius = password.frame.size.height / 2
-        password.addShadow()
-        password.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 34/255, green: 87/255, blue: 122/255, alpha: 1)])
+        passwordField.layer.cornerRadius = passwordField.frame.size.height / 2
+        passwordField.addShadow()
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 34/255, green: 87/255, blue: 122/255, alpha: 1)])
         
         
-        email.layer.cornerRadius = email.frame.size.height / 2
-        email.addShadow()
-        email.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 34/255, green: 87/255, blue: 122/255, alpha: 1)])
+        emailField.layer.cornerRadius = emailField.frame.size.height / 2
+        emailField.addShadow()
+        emailField.attributedPlaceholder = NSAttributedString(string: "Email",
+                                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 34/255, green: 87/255, blue: 122/255, alpha: 1)])
         
         
         logButton.layer.cornerRadius = logButton.frame.size.height / 2
@@ -39,18 +40,50 @@ class LoginViewController: UIViewController {
     
     
     
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        
+        if let email = emailField.text, let password = passwordField.text {
+            
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                
+                if let e = error {
+                    let alert = UIAlertController(title: "Error:(", message: e.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                    
+                } else  {
+                    
+                    self.performSegue(withIdentifier: "LoginToChat", sender: nil)
+                    
+                    
+                }
+                
+            }
+            
+            
+        }
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    
+    
     
 }
+
+
+
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+
 
 extension UIView {
     func addShadow(shadowColor: CGColor = UIColor.black.cgColor,
@@ -64,3 +97,4 @@ extension UIView {
         layer.masksToBounds = false
     }
 }
+
