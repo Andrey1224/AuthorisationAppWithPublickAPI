@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import Firebase
 
 class RegisterViewController: UIViewController {
@@ -34,7 +35,7 @@ class RegisterViewController: UIViewController {
         emailTF.attributedPlaceholder = NSAttributedString(string: "Email",
                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 34/255, green: 87/255, blue: 122/255, alpha: 1)])
         
-            
+        
         registerButton.layer.cornerRadius = registerButton.frame.size.height / 2
         
     }
@@ -51,16 +52,17 @@ class RegisterViewController: UIViewController {
                     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                     self.present(alert, animated: true)
                     
-                } else if  let user = authResult?.user {
-                    print("\(user.email!) created")
+                    //                } else if  let user = authResult?.user {
+                    //                    print("\(user.email!) created")
+                    //                }
+                    
+                } else {
+                    self.performSegue(withIdentifier: "RegisterToChat", sender: nil)
                 }
-                self.performSegue(withIdentifier: "RegisterToChat", sender: nil)
             }
         }
+        
     }
-    
-    
-    
     
     
     /*
@@ -72,5 +74,6 @@ class RegisterViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
     
 }
