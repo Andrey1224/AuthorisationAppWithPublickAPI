@@ -173,15 +173,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kvz-jM-XWq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.3411764706" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1333333333" green="0.3411764706" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWG-IH-c1J">
-                                <rect key="frame" x="0.0" y="708" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="724" width="414" height="84"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Something..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ix-rg-u2g">
-                                        <rect key="frame" x="10" y="24" width="337" height="40"/>
+                                        <rect key="frame" x="8" y="8" width="337" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0OJ-oc-qLl"/>
                                         </constraints>
@@ -189,7 +189,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI0-Le-R6e">
-                                        <rect key="frame" x="355" y="8" width="49" height="64"/>
+                                        <rect key="frame" x="357" y="0.0" width="49" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="49" id="3Ge-ev-YXT"/>
                                             <constraint firstAttribute="height" constant="64" id="IMN-Rj-Yz7"/>
@@ -205,13 +205,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.1333333333" green="0.3411764706" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="HI0-Le-R6e" secondAttribute="bottom" constant="28" id="5e3-MH-qaI"/>
-                                    <constraint firstItem="HI0-Le-R6e" firstAttribute="leading" secondItem="3Ix-rg-u2g" secondAttribute="trailing" constant="8" id="AIN-iT-O44"/>
+                                    <constraint firstAttribute="bottom" secondItem="HI0-Le-R6e" secondAttribute="bottom" constant="20" id="5e3-MH-qaI"/>
+                                    <constraint firstItem="HI0-Le-R6e" firstAttribute="leading" secondItem="3Ix-rg-u2g" secondAttribute="trailing" constant="12" id="AIN-iT-O44"/>
                                     <constraint firstAttribute="bottom" secondItem="3Ix-rg-u2g" secondAttribute="bottom" constant="36" id="GX4-h5-eTm"/>
-                                    <constraint firstItem="HI0-Le-R6e" firstAttribute="top" secondItem="dWG-IH-c1J" secondAttribute="top" constant="8" id="H1k-gx-gPT"/>
-                                    <constraint firstAttribute="trailing" secondItem="HI0-Le-R6e" secondAttribute="trailing" constant="10" id="Rhg-UN-Mfk"/>
-                                    <constraint firstAttribute="height" constant="100" id="ghJ-UB-RKN"/>
-                                    <constraint firstItem="3Ix-rg-u2g" firstAttribute="leading" secondItem="dWG-IH-c1J" secondAttribute="leading" constant="10" id="laG-tw-Hje"/>
+                                    <constraint firstItem="HI0-Le-R6e" firstAttribute="top" secondItem="dWG-IH-c1J" secondAttribute="top" id="H1k-gx-gPT"/>
+                                    <constraint firstAttribute="trailing" secondItem="HI0-Le-R6e" secondAttribute="trailing" constant="8" id="Rhg-UN-Mfk"/>
+                                    <constraint firstAttribute="height" constant="84" id="ghJ-UB-RKN"/>
+                                    <constraint firstItem="3Ix-rg-u2g" firstAttribute="leading" secondItem="dWG-IH-c1J" secondAttribute="leading" constant="8" id="laG-tw-Hje"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -236,8 +236,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomConstraint" destination="GX4-h5-eTm" id="5OB-RG-muZ"/>
+                        <outlet property="bottomViewConstraint" destination="Fs0-y5-pcZ" id="Emq-cu-mQe"/>
                         <outlet property="chatTextField" destination="3Ix-rg-u2g" id="gaI-Ij-VNu"/>
+                        <outlet property="sendButton" destination="HI0-Le-R6e" id="qIF-Te-hqo"/>
                         <outlet property="tableView" destination="kvz-jM-XWq" id="Jga-o6-cAe"/>
                     </connections>
                 </viewController>

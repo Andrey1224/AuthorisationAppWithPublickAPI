@@ -8,16 +8,20 @@
 import UIKit
 
 import Firebase
+
 import FirebaseFirestore
 
 class ChatViewController: UIViewController {
     
+    @IBOutlet weak var sendButton: UIButton!
     
     @IBOutlet weak var chatTextField: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
+    
+   
     
     let cellIdetifier = "ReusableCell"
     
@@ -32,39 +36,26 @@ class ChatViewController: UIViewController {
         loadMesseges()
         tableView.dataSource = self
         
+        
         title = "Small🗣Chat"
         navigationItem.hidesBackButton = true
         //tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdetifier)
         tableView.backgroundColor = UIColor.init(red: 34/255, green: 87/255, blue: 122/255, alpha: 1)
         tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
-    }
-    
-    @objc func keyboardWillShow(sender: NSNotification) {
-         
-        if let keyboardFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-                let keyboardRectangle = keyboardFrame.cgRectValue
-                let keyboardHeight = keyboardRectangle.height
-            bottomConstraint.constant += keyboardHeight
-            }
-        view.layoutIfNeeded()
-    }
-
-    @objc func keyboardWillHide(sender: NSNotification) {
-         
-        //self.chatTextField.frame.origin.y = 24
-        bottomConstraint.constant = 24
-        view.layoutIfNeeded()
-
         
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil);
+        
+
     }
+    
     
 
     
-    
+
     @IBAction func sendButtonPressed(_ sender: Any) {
         if let messageBody = chatTextField.text, let senderr = Auth.auth().currentUser?.email {
             db.collection(FStore.collectionName).addDocument(data: [ FStore.senderField: senderr,
@@ -129,6 +120,7 @@ class ChatViewController: UIViewController {
     }
 }
 
+//MARK: - UITextFieldDelegate
 
 extension ChatViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -138,6 +130,7 @@ extension ChatViewController : UITextFieldDelegate {
 }
 
 
+//MARK: - UITableViewDataSource
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -166,6 +159,40 @@ extension ChatViewController: UITableViewDataSource {
         return cell
     }
      
+}
+
+//MARK: - KeyboardSettings
+
+extension ChatViewController {
+    
+    @objc func keyboardWillShow(notification: Notification) {
+
+        let keyboardSize = (notification.userInfo?  [UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+
+         let keyboardHeight = keyboardSize?.height
+
+              self.bottomViewConstraint.constant = keyboardHeight! - view.safeAreaInsets.bottom
+            
+           UIView.animate(withDuration: 0.5){
+
+              self.view.layoutIfNeeded()
+
+           }
+
+       }
+
+      @objc func keyboardWillHide(notification: Notification){
+
+          self.bottomViewConstraint.constant =  0
+
+           UIView.animate(withDuration: 0.5){
+
+              self.view.layoutIfNeeded()
+
+           }
+      }
+    
+    
 }
 
 
