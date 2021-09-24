@@ -171,19 +171,22 @@ extension ChatViewController {
 
          let keyboardHeight = keyboardSize?.height
 
-              self.bottomViewConstraint.constant = keyboardHeight! - view.safeAreaInsets.bottom
-            
+        self.bottomViewConstraint.constant = keyboardHeight! - self.view.safeAreaInsets.bottom
+        
            UIView.animate(withDuration: 0.5){
+               
 
               self.view.layoutIfNeeded()
 
            }
 
        }
+    
 
       @objc func keyboardWillHide(notification: Notification){
 
           self.bottomViewConstraint.constant =  0
+          
 
            UIView.animate(withDuration: 0.5){
 
